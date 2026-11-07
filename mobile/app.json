@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "Apna Dastarkhuaan",
+    "slug": "apna-dastarkhuaan",
+    "scheme": "apnadastarkhuaan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.apnadastarkhuaan.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "We use your location to show nearby home kitchens and estimate delivery time.",
+        "NSCameraUsageDescription": "Allow camera access to take photos of your kitchen and food items.",
+        "NSPhotoLibraryUsageDescription": "Allow photo library access to upload kitchen and food images."
+      }
+    },
+    "android": {
+      "package": "com.apnadastarkhuaan.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#F25C1F",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "CAMERA", "READ_MEDIA_IMAGES"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F25C1F",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Apna Dastarkhuaan uses your location to show nearby home kitchens and estimate delivery time."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Apna Dastarkhuaan to access your photos to upload kitchen and food images."
+        }
+      ],
+      "expo-notifications",
+      "expo-image"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
